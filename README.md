@@ -26,18 +26,22 @@ When an image opened by python script, this image may contains red green and blu
 
 ### b) Smoothing
 Image must be smoothed by some filters to get rid of noises. Because, these noises will make script to find edges that are not really exist. To smooth an image there are some filters to use. Gaussian filter will be used to smooth input images. This method takes sigma parameter to adjust blur effect. On below, you can see images with different parameters.
+
 ![enter image description here](https://github.com/hasbisevinc/Canny-Edge-Detection-Algorithm/blob/master/report_images/smoothing.PNG?raw=true)
 
 ### c) Finding gradients
 To find gradients, we can use some methods such as derivative of gaussian, sobel etc.. Sobel filter will be used sobel filter to find gradients.
+
 ![enter image description here](https://github.com/hasbisevinc/Canny-Edge-Detection-Algorithm/blob/master/report_images/gradients.PNG?raw=true)
 
 ### d) Non-maximum suppression 
 In this step, script should eliminate pixels which is not greater than neighbor pixels. gradient step outputs, magnitude and direction, will be used to suppressions. below picture shows current state after non-maximum suppression.
+
 ![enter image description here](https://github.com/hasbisevinc/Canny-Edge-Detection-Algorithm/blob/master/report_images/supression.PNG?raw=true)
 
 ### e) Double Thresholding 
 Two threshold, one of them is high and other is low, to adjust edge weight. Images with different threshold values shown below
+
 ![enter image description here](https://github.com/hasbisevinc/Canny-Edge-Detection-Algorithm/blob/master/report_images/thresholding.PNG?raw=true)
 
 ### f) Linking Edges 
@@ -45,4 +49,5 @@ At this step, script will suppress all edges that are not connected to very stro
 
 ## 3) Output 
 To see full-sized output images, please look output folder in the project directory
+
 ![enter image description here](https://github.com/hasbisevinc/Canny-Edge-Detection-Algorithm/blob/master/report_images/result.PNG?raw=true)
